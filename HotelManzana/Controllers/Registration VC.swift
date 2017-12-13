@@ -10,6 +10,12 @@ import UIKit
 
 class RegistrationVC: UITableViewController {
 
+    @IBOutlet weak var firstNameTextField: UITextField!
+
+    @IBOutlet weak var lastNameTextField: UITextField!
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
