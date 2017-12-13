@@ -16,6 +16,8 @@ class RegistrationVC: UITableViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
     
+    @IBAction func doneBarButtonItem(_ sender: UIBarButtonItem) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
