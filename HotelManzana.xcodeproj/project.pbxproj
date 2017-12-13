@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		E35B77691FE1213F00E6BBFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35B77681FE1213F00E6BBFC /* AppDelegate.swift */; };
-		E35B776B1FE1213F00E6BBFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35B776A1FE1213F00E6BBFC /* ViewController.swift */; };
 		E35B776E1FE1213F00E6BBFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E35B776C1FE1213F00E6BBFC /* Main.storyboard */; };
 		E35B77701FE1213F00E6BBFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E35B776F1FE1213F00E6BBFC /* Assets.xcassets */; };
 		E35B77731FE1213F00E6BBFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E35B77711FE1213F00E6BBFC /* LaunchScreen.storyboard */; };
@@ -18,7 +17,6 @@
 /* Begin PBXFileReference section */
 		E35B77651FE1213F00E6BBFC /* HotelManzana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotelManzana.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E35B77681FE1213F00E6BBFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E35B776A1FE1213F00E6BBFC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E35B776D1FE1213F00E6BBFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E35B776F1FE1213F00E6BBFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E35B77721FE1213F00E6BBFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -77,7 +75,6 @@
 		E35B777D1FE1217100E6BBFC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E35B776A1FE1213F00E6BBFC /* ViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -163,7 +160,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E35B776B1FE1213F00E6BBFC /* ViewController.swift in Sources */,
 				E35B777B1FE1216300E6BBFC /* Registration.swift in Sources */,
 				E35B77691FE1213F00E6BBFC /* AppDelegate.swift in Sources */,
 			);
