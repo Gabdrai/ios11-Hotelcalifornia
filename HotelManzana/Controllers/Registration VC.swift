@@ -17,6 +17,16 @@ class RegistrationVC: UITableViewController {
     @IBOutlet weak var emailTextField: UITextField!
     
     @IBAction func doneBarButtonItem(_ sender: UIBarButtonItem) {
+        let firstName = firstNameTextField.text ?? ""
+        let lastName = lastNameTextField.text ?? ""
+        let email = emailTextField.text ?? ""
+        
+        print("First Name: \(firstName)")
+        print("Last Name: \(lastName)")
+        print("Email: \(email)")
+    
+        
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
