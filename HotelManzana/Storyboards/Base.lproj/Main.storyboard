@@ -174,7 +174,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Fg4-rb-286">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="215.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="216"/>
                                                     <date key="date" timeIntervalSinceReferenceDate="534947425.02970099">
                                                         <!--2017-12-14 12:30:25 +0000-->
                                                     </date>
@@ -240,6 +240,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="checkInDateLabel" destination="w4r-I4-DeC" id="s6r-tg-1jv"/>
+                        <outlet property="checkInDatePicker" destination="CB8-wc-5jP" id="J3E-L8-5zW"/>
+                        <outlet property="checkOutDateLabel" destination="hh7-ag-W7K" id="ZSE-Ty-oXD"/>
+                        <outlet property="checkOutDatePicker" destination="Fg4-rb-286" id="p07-b4-M3i"/>
                         <outlet property="emailTextField" destination="CWZ-LW-3Lo" id="9Sx-la-T6x"/>
                         <outlet property="firstNameTextField" destination="0gY-dq-mvH" id="PuD-Ez-6jm"/>
                         <outlet property="lastNameTextField" destination="cFk-lk-aJr" id="guO-EG-OZn"/>
