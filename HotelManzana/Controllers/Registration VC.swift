@@ -61,6 +61,14 @@ class RegistrationVC: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
-
+    func updateDateViews() {
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.dateStyle = .medium
+        
+        
+        checkInDateLabel.text = dateFormatter.string(from: checkInDatePicker.date)
+        checkOutDateLabel.text = dateFormatter.string(from: checkOutDatePicker.date)
+    }
    
 }
