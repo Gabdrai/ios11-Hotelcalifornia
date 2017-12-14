@@ -70,5 +70,12 @@ class RegistrationVC: UITableViewController {
         checkInDateLabel.text = dateFormatter.string(from: checkInDatePicker.date)
         checkOutDateLabel.text = dateFormatter.string(from: checkOutDatePicker.date)
     }
+    
+    @IBAction func datePickerChanged(_ sender: UIDatePicker) {
+        
+        checkOutDatePicker.minimumDate = checkInDatePicker.date.addingTimeInterval(86400)
+        updateDateViews()
+    }
+    
    
 }
