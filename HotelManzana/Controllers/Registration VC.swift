@@ -21,6 +21,14 @@ class RegistrationVC: UITableViewController {
     @IBOutlet weak var checkOutDateLabel: UILabel!
     @IBOutlet weak var checkOutDatePicker: UIDatePicker!
     
+    @IBOutlet weak var numberOfAdultsStepper: UIStepper!
+
+    @IBOutlet weak var numberOfChildrenStepper: UIStepper!
+    
+    @IBOutlet weak var numberOfAdultsLabel: UILabel!
+    @IBOutlet weak var numberOfChildrenLabel: UILabel!
+    
+    
     
     let checkInDatePickerIndexPath = IndexPath(row: 1, section: 1)
     let checkOutDatePickerIndexPath = IndexPath(row: 3, section: 1)
@@ -106,6 +114,11 @@ class RegistrationVC: UITableViewController {
         let checkInDate = checkInDatePicker.date
         let checkOutDate = checkOutDatePicker.date
         
+        let numberOfAdults = numberOfAdultsLabel.text
+        let numberOfChildren = numberOfChildrenLabel.text
+        
+        
+        
         print("First Name: \(firstName)")
         print("Last Name: \(lastName)")
         print("Email: \(email)")
@@ -144,6 +157,11 @@ class RegistrationVC: UITableViewController {
         checkOutDateLabel.text = dateFormatter.string(from: checkOutDatePicker.date)
     }
     
+    func updateGuestsView() {
+        
+        numberOfAdultsLabel.text = "\(Int(numberOfAdultsStepper.value))"
+        numberOfChildrenLabel.text = "\(Int(numberOfChildrenStepper.value))"
+    }
     @IBAction func datePickerChanged(_ sender: UIDatePicker) {
         
         checkOutDatePicker.minimumDate = checkInDatePicker.date.addingTimeInterval(86400)
