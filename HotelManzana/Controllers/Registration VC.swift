@@ -43,10 +43,15 @@ class RegistrationVC: UITableViewController {
         let lastName = lastNameTextField.text ?? ""
         let email = emailTextField.text ?? ""
         
+        let checkInDate = checkInDatePicker.date
+        let checkOutDate = checkOutDatePicker.date
+        
         print("First Name: \(firstName)")
         print("Last Name: \(lastName)")
         print("Email: \(email)")
         
+        print("check in date: \(checkInDate)")
+        print("check out date: \(checkOutDate)")
     }
     
     
@@ -59,6 +64,14 @@ class RegistrationVC: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        let midnightToday = Calendar.current.startOfDay(for: Date())
+        checkInDatePicker.minimumDate = midnightToday
+        checkInDatePicker.date = midnightToday
+        
+        checkOutDatePicker.minimumDate = checkInDatePicker.date.addingTimeInterval(86400)
+        
+        updateDateViews()
     }
     
     func updateDateViews() {
