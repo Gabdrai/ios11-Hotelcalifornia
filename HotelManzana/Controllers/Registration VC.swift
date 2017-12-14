@@ -37,6 +37,66 @@ class RegistrationVC: UITableViewController {
         }
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        switch(indexPath.section, indexPath.row) {
+            
+        case (checkInDatePickerIndexPath.section, checkInDatePickerIndexPath.row):
+            if isCheckInDatePickerShown {
+                return 216.0
+            } else {
+                return 0
+            }
+        case (checkOutDatePickerIndexPath.section, checkOutDatePickerIndexPath.row):
+            if isCheckOutDatePickerShown {
+                return 216.0
+            } else {
+                return 0
+            }
+            
+        default:
+            return 44.0
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        switch(indexPath.section, indexPath.row) {
+            
+            
+        case (checkInDatePickerIndexPath.section, checkInDatePickerIndexPath.row - 1):
+            if isCheckInDatePickerShown {
+                isCheckInDatePickerShown = false
+            } else if isCheckOutDatePickerShown {
+                isCheckOutDatePickerShown = false
+                isCheckInDatePickerShown = true
+            }
+            else {
+                isCheckInDatePickerShown = true
+            }
+            tableView.beginUpdates()
+            tableView.endUpdates()
+            
+        case (checkOutDatePickerIndexPath.section, checkOutDatePickerIndexPath.row - 1):
+            if isCheckOutDatePickerShown {
+                isCheckOutDatePickerShown = true
+            } else if isCheckInDatePickerShown {
+                isCheckInDatePickerShown = false
+                isCheckOutDatePickerShown = true
+            }
+            else {
+                isCheckOutDatePickerShown = true
+            }
+            tableView.beginUpdates()
+            tableView.endUpdates()
+            
+            
+        default:
+            break
+        }
+    }
+    
     
     @IBAction func doneBarButtonItem(_ sender: UIBarButtonItem) {
         let firstName = firstNameTextField.text ?? ""
