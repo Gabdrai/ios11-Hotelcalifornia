@@ -130,6 +130,9 @@
                                                     <date key="date" timeIntervalSinceReferenceDate="534862641.80591798">
                                                         <!--2017-12-13 12:57:21 +0000-->
                                                     </date>
+                                                    <connections>
+                                                        <action selector="datePickerChanged:" destination="HNM-zn-2BD" eventType="valueChanged" id="HpM-tk-dya"/>
+                                                    </connections>
                                                 </datePicker>
                                             </subviews>
                                             <constraints>
@@ -178,6 +181,9 @@
                                                     <date key="date" timeIntervalSinceReferenceDate="534947425.02970099">
                                                         <!--2017-12-14 12:30:25 +0000-->
                                                     </date>
+                                                    <connections>
+                                                        <action selector="datePickerChanged:" destination="HNM-zn-2BD" eventType="valueChanged" id="Nz0-qM-JVO"/>
+                                                    </connections>
                                                 </datePicker>
                                             </subviews>
                                             <constraints>

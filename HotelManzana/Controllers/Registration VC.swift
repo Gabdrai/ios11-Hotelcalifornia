@@ -61,6 +61,21 @@ class RegistrationVC: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
-
+    func updateDateViews() {
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.dateStyle = .medium
+        
+        
+        checkInDateLabel.text = dateFormatter.string(from: checkInDatePicker.date)
+        checkOutDateLabel.text = dateFormatter.string(from: checkOutDatePicker.date)
+    }
+    
+    @IBAction func datePickerChanged(_ sender: UIDatePicker) {
+        
+        checkOutDatePicker.minimumDate = checkInDatePicker.date.addingTimeInterval(86400)
+        updateDateViews()
+    }
+    
    
 }
