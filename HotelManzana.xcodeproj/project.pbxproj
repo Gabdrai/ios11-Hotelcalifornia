@@ -13,6 +13,7 @@
 		E35B77731FE1213F00E6BBFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E35B77711FE1213F00E6BBFC /* LaunchScreen.storyboard */; };
 		E35B777B1FE1216300E6BBFC /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35B777A1FE1216300E6BBFC /* Registration.swift */; };
 		E9CFCF561FE1532A00BB2ABA /* Registration VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CFCF551FE1532A00BB2ABA /* Registration VC.swift */; };
+		E9E14A231FE2DCD00017684B /* SelectRoomTypeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E14A221FE2DCD00017684B /* SelectRoomTypeTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E35B77741FE1213F00E6BBFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E35B777A1FE1216300E6BBFC /* Registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
 		E9CFCF551FE1532A00BB2ABA /* Registration VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Registration VC.swift"; sourceTree = "<group>"; };
+		E9E14A221FE2DCD00017684B /* SelectRoomTypeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRoomTypeTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		E35B777D1FE1217100E6BBFC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E9E14A221FE2DCD00017684B /* SelectRoomTypeTableViewController.swift */,
 				E9CFCF551FE1532A00BB2ABA /* Registration VC.swift */,
 			);
 			path = Controllers;
@@ -163,6 +166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9E14A231FE2DCD00017684B /* SelectRoomTypeTableViewController.swift in Sources */,
 				E9CFCF561FE1532A00BB2ABA /* Registration VC.swift in Sources */,
 				E35B777B1FE1216300E6BBFC /* Registration.swift in Sources */,
 				E35B77691FE1213F00E6BBFC /* AppDelegate.swift in Sources */,

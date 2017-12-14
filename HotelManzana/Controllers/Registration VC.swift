@@ -117,7 +117,7 @@ class RegistrationVC: UITableViewController {
         
         let numberOfAdults = numberOfAdultsLabel.text
         let numberOfChildren = numberOfChildrenLabel.text
-        
+        let hasWifi = wifiSwitch.isOn
         
         
         print("First Name: \(firstName)")
@@ -130,6 +130,7 @@ class RegistrationVC: UITableViewController {
         print("numberOfAdults: \(numberOfAdults)")
         print("numberOfChildren: \(numberOfChildren)")
         
+        print("Wifi: \(hasWifi)")
        
     }
     
@@ -182,5 +183,11 @@ class RegistrationVC: UITableViewController {
         
     }
     
+    @IBAction func wifiSwitchChanged(_ sender: Any) {
+    }
+    
+    
    
+    
+
 }
