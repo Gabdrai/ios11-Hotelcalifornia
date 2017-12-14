@@ -43,10 +43,15 @@ class RegistrationVC: UITableViewController {
         let lastName = lastNameTextField.text ?? ""
         let email = emailTextField.text ?? ""
         
+        let checkInDate = checkInDatePicker.date
+        let checkOutDate = checkOutDatePicker.date
+        
         print("First Name: \(firstName)")
         print("Last Name: \(lastName)")
         print("Email: \(email)")
         
+        print("check in date: \(checkInDate)")
+        print("check out date: \(checkOutDate)")
     }
     
     
