@@ -145,6 +145,7 @@ class RegistrationVC: UITableViewController {
         checkOutDatePicker.minimumDate = checkInDatePicker.date.addingTimeInterval(86400)
         
         updateDateViews()
+        updateNumberOfGuests()
     }
     
     func updateDateViews() {
@@ -157,7 +158,7 @@ class RegistrationVC: UITableViewController {
         checkOutDateLabel.text = dateFormatter.string(from: checkOutDatePicker.date)
     }
     
-    func updateGuestsView() {
+    func updateNumberOfGuests() {
         
         numberOfAdultsLabel.text = "\(Int(numberOfAdultsStepper.value))"
         numberOfChildrenLabel.text = "\(Int(numberOfChildrenStepper.value))"
@@ -166,6 +167,13 @@ class RegistrationVC: UITableViewController {
         
         checkOutDatePicker.minimumDate = checkInDatePicker.date.addingTimeInterval(86400)
         updateDateViews()
+    }
+    
+    @IBAction func stepperValueChanged(_ sender: Any) {
+        
+        updateNumberOfGuests()
+        
+        
     }
     
    
