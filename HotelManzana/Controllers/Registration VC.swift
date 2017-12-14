@@ -21,6 +21,23 @@ class RegistrationVC: UITableViewController {
     @IBOutlet weak var checkOutDateLabel: UILabel!
     @IBOutlet weak var checkOutDatePicker: UIDatePicker!
     
+    
+    let checkInDatePickerIndexPath = IndexPath(row: 1, section: 1)
+    let checkOutDatePickerIndexPath = IndexPath(row: 3, section: 1)
+    
+    var isCheckInDatePickerShown: Bool = false {
+        didSet {
+            checkInDatePicker.isHidden = !isCheckInDatePickerShown
+        }
+    }
+    
+    var isCheckOutDatePickerShown: Bool = false {
+        didSet {
+            checkOutDatePicker.isHidden = !isCheckOutDatePickerShown
+        }
+    }
+    
+    
     @IBAction func doneBarButtonItem(_ sender: UIBarButtonItem) {
         let firstName = firstNameTextField.text ?? ""
         let lastName = lastNameTextField.text ?? ""
@@ -29,10 +46,11 @@ class RegistrationVC: UITableViewController {
         print("First Name: \(firstName)")
         print("Last Name: \(lastName)")
         print("Email: \(email)")
-    
-        
         
     }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
