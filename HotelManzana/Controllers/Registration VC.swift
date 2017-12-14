@@ -80,7 +80,7 @@ class RegistrationVC: UITableViewController {
             
         case (checkOutDatePickerIndexPath.section, checkOutDatePickerIndexPath.row - 1):
             if isCheckOutDatePickerShown {
-                isCheckOutDatePickerShown = true
+                isCheckOutDatePickerShown = false
             } else if isCheckInDatePickerShown {
                 isCheckInDatePickerShown = false
                 isCheckOutDatePickerShown = true

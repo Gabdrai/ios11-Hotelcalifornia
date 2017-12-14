@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection headerTitle="Section-1" id="aj1-XD-kHz">
+                            <tableViewSection headerTitle="Personal Details" id="aj1-XD-kHz" userLabel="Personal Details">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="fet-FP-Ns5">
                                         <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
@@ -88,7 +88,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Section-2" id="Rlo-RW-RuI">
+                            <tableViewSection headerTitle="Dates" id="Rlo-RW-RuI">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="3Go-EZ-B7x">
                                         <rect key="frame" x="0.0" y="243.5" width="375" height="44"/>
