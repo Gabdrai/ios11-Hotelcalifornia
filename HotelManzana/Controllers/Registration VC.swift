@@ -59,6 +59,14 @@ class RegistrationVC: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        let midnightToday = Calendar.current.startOfDay(for: Date())
+        checkInDatePicker.minimumDate = midnightToday
+        checkInDatePicker.date = midnightToday
+        
+        checkOutDatePicker.minimumDate = checkInDatePicker.date.addingTimeInterval(86400)
+        
+        updateDateViews()
     }
     
     func updateDateViews() {
