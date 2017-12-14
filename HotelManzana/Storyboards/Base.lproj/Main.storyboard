@@ -285,6 +285,32 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cD9-XI-6Mn" id="CWs-uT-QFj">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ghj-6e-bTb">
+                                                    <rect key="frame" x="308" y="6" width="51" height="31"/>
+                                                </switch>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Wi-Fi (per day)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YP5-Tf-1T6">
+                                                    <rect key="frame" x="16" y="11" width="115" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="riM-RT-jWb">
+                                                    <rect key="frame" x="258" y="12" width="29" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="YP5-Tf-1T6" firstAttribute="centerY" secondItem="CWs-uT-QFj" secondAttribute="centerY" id="FYo-OX-Pyv"/>
+                                                <constraint firstAttribute="trailing" secondItem="Ghj-6e-bTb" secondAttribute="trailing" constant="18" id="FeO-lU-jl8"/>
+                                                <constraint firstAttribute="bottom" secondItem="Ghj-6e-bTb" secondAttribute="bottom" constant="6.5" id="Jni-Ie-5AR"/>
+                                                <constraint firstItem="Ghj-6e-bTb" firstAttribute="leading" secondItem="riM-RT-jWb" secondAttribute="trailing" constant="21" id="RLh-rw-htX"/>
+                                                <constraint firstItem="riM-RT-jWb" firstAttribute="top" secondItem="CWs-uT-QFj" secondAttribute="topMargin" constant="1" id="X6k-Qh-R4g"/>
+                                                <constraint firstItem="riM-RT-jWb" firstAttribute="bottom" secondItem="CWs-uT-QFj" secondAttribute="bottomMargin" id="fpv-KW-See"/>
+                                                <constraint firstItem="Ghj-6e-bTb" firstAttribute="top" secondItem="CWs-uT-QFj" secondAttribute="top" constant="6" id="kaj-o9-EkT"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -326,6 +352,7 @@
                         <outlet property="numberOfAdultsStepper" destination="BZm-5B-wN8" id="BnO-hJ-ckS"/>
                         <outlet property="numberOfChildrenLabel" destination="dD1-FL-oun" id="hvZ-50-G3G"/>
                         <outlet property="numberOfChildrenStepper" destination="0VF-tE-WLp" id="gBz-8K-1pf"/>
+                        <outlet property="wifiSwitch" destination="Ghj-6e-bTb" id="wzq-La-vK3"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qNe-9x-f9W" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -28,6 +28,7 @@ class RegistrationVC: UITableViewController {
     @IBOutlet weak var numberOfAdultsLabel: UILabel!
     @IBOutlet weak var numberOfChildrenLabel: UILabel!
     
+    @IBOutlet weak var wifiSwitch: UISwitch!
     
     
     let checkInDatePickerIndexPath = IndexPath(row: 1, section: 1)
@@ -125,6 +126,11 @@ class RegistrationVC: UITableViewController {
         
         print("check in date: \(checkInDate)")
         print("check out date: \(checkOutDate)")
+        
+        print("numberOfAdults: \(numberOfAdults)")
+        print("numberOfChildren: \(numberOfChildren)")
+        
+       
     }
     
     
