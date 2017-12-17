@@ -9,6 +9,7 @@
 import UIKit
 
 class RegistrationVC: UITableViewController, SelectRoomTypeTableViewControllerDelegate {
+   
     func didSelect(roomType: RoomType) {
         self.roomType = roomType
         updateRoomType()
@@ -228,9 +229,5 @@ class RegistrationVC: UITableViewController, SelectRoomTypeTableViewControllerDe
     
     
    
-    
-    
-   
-    
 
 }

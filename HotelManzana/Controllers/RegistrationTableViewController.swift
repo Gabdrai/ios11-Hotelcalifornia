@@ -66,21 +66,10 @@ class RegistrationTableViewController: UITableViewController {
     }
     
     
-    @IBAction func unwindFromAddRegistration(unwindSegue: UIStoryboardSegue) {
-        
-        guard let addRegistrationTableViewController = unwindSegue.source as? RegistrationVC
-        
-        let registration = addRegistrationTableViewController.registration else
-        
-        { return }
-        
-        registrations.append(registration!)
-        tableView.reloadData()
+  
+    
+    
     }
-    
-    
-    
-    
     
     
     
@@ -139,4 +128,4 @@ class RegistrationTableViewController: UITableViewController {
     }
     */
 
-}
+

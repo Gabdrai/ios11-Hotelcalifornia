@@ -16,19 +16,19 @@ protocol SelectRoomTypeTableViewControllerDelegate {
 
 
 class SelectRoomTypeTableViewController: UITableViewController {
+    
     var delegate: SelectRoomTypeTableViewControllerDelegate?
+    
     var roomType: RoomType?
     
   
-    
-
-    
     override func numberOfSections(in tableView: UITableView) -> Int
     {
         return 1
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        
+        
         return RoomType.all.count
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -49,7 +49,10 @@ class SelectRoomTypeTableViewController: UITableViewController {
             cell.accessoryType = .none
         }
         
+        
         return cell
+        
+        
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -62,6 +65,7 @@ class SelectRoomTypeTableViewController: UITableViewController {
         
         tableView.reloadData()
         
+       
         
     }
     
