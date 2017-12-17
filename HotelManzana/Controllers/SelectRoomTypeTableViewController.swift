@@ -18,6 +18,8 @@ class SelectRoomTypeTableViewController: UITableViewController {
     
     var roomType: RoomType?
     
+    var delegate: SelectRoomTypeTableViewControllerDelegate?
+    
     
     override func numberOfSections(in tableView: UITableView) -> Int
     {
