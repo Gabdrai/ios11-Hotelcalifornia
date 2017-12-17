@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="t8I-wQ-BwG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vd4-5q-AZU">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -356,6 +356,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="UQ3-ga-nQ2" kind="show" identifier="SelectRoomType" id="FsW-yR-FI3"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -384,14 +387,60 @@
                         <outlet property="numberOfAdultsStepper" destination="BZm-5B-wN8" id="BnO-hJ-ckS"/>
                         <outlet property="numberOfChildrenLabel" destination="dD1-FL-oun" id="hvZ-50-G3G"/>
                         <outlet property="numberOfChildrenStepper" destination="0VF-tE-WLp" id="gBz-8K-1pf"/>
-                        <outlet property="roomTypeLabel" destination="hxL-T1-2p5" id="1gY-fx-2mY"/>
+                        <outlet property="roomTypeLabel" destination="vG6-PB-vx3" id="w48-rT-c1Z"/>
                         <outlet property="wifiSwitch" destination="Ghj-6e-bTb" id="mWz-yz-uBV"/>
-                        <segue destination="UQ3-ga-nQ2" kind="show" id="Qx3-1v-HV2"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qNe-9x-f9W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="280.80000000000001" y="148.87556221889056"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="zd0-k8-cDA">
+            <objects>
+                <tableViewController id="WQk-Ud-SqP" customClass="RegistrationTableViewController" customModule="HotelManzana" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="LLH-RS-II4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RegistrationCell" id="QAc-el-ySH">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QAc-el-ySH" id="fhc-OO-NER">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="WQk-Ud-SqP" id="jBd-6r-rD0"/>
+                            <outlet property="delegate" destination="WQk-Ud-SqP" id="bU1-Tf-mxZ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="KAW-Kp-dUA">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="7rA-E8-1WB"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qiA-HD-KLz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1428" y="149"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Am8-DK-4oZ">
+            <objects>
+                <navigationController id="vd4-5q-AZU" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hpC-LR-cqn">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="WQk-Ud-SqP" kind="relationship" relationship="rootViewController" id="FGU-Q9-DAw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uJE-gn-Isc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2273" y="149"/>
         </scene>
         <!--Select Room Type Table View Controller-->
         <scene sceneID="kES-Jg-htl">

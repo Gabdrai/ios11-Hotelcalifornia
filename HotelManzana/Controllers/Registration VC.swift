@@ -8,7 +8,12 @@
 
 import UIKit
 
-class RegistrationVC: UITableViewController {
+class RegistrationVC: UITableViewController, SelectRoomTypeTableViewControllerDelegate {
+    func didSelect(roomType: RoomType) {
+        self.roomType = roomType
+        updateRoomType()
+    }
+    
 
     @IBOutlet weak var firstNameTextField: UITextField!
 
@@ -31,6 +36,8 @@ class RegistrationVC: UITableViewController {
     @IBOutlet weak var wifiSwitch: UISwitch!
     
     @IBOutlet weak var roomTypeLabel: UILabel!
+    
+    var roomType : RoomType?
     
     let checkInDatePickerIndexPath = IndexPath(row: 1, section: 1)
     let checkOutDatePickerIndexPath = IndexPath(row: 3, section: 1)
@@ -119,10 +126,10 @@ class RegistrationVC: UITableViewController {
         let numberOfAdults = numberOfAdultsLabel.text
         let numberOfChildren = numberOfChildrenLabel.text
         let hasWifi = wifiSwitch.isOn
+        let roomChoice = roomType?.name ?? "Not Set"
         
         
-        
-        
+        print("Done Tapped")
         print("First Name: \(firstName)")
         print("Last Name: \(lastName)")
         print("Email: \(email)")
@@ -134,9 +141,24 @@ class RegistrationVC: UITableViewController {
         print("numberOfChildren: \(numberOfChildren)")
         
         print("Wifi: \(hasWifi)")
-       
+        print("roomType: \(roomChoice)")
     }
     
+    var registration: Registration? {
+        
+        guard let roomType = roomType else { return nil }
+        
+        let firstName = firstNameTextField.text ?? ""
+        let lastName = lastNameTextField.text ?? ""
+        let email = emailTextField.text ?? ""
+        let checkInDate = checkInDatePicker.date
+        let checkOutDate = checkOutDatePicker.date
+        let numberOfAdults = Int(numberOfAdultsStepper.value)
+        let numberOfChildren = Int(numberOfChildrenStepper.value)
+        let hasWifi = wifiSwitch.isOn
+        
+        return Registration(firstName: firstName, lastName: lastName, emailAddress: email, checkInDate: checkInDate, checkOutDate: checkOutDate, numberOfAdults: numberOfAdults, numberOfChildren: numberOfChildren, roomType: roomType, wifi: hasWifi)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -161,7 +183,7 @@ class RegistrationVC: UITableViewController {
         updateRoomType()
     }
     
-    var roomType : RoomType?
+    
     
     func updateRoomType() {
         if let roomType = roomType {
