@@ -19,7 +19,7 @@ struct Registration {
     var numberOfAdults: Int
     var numberOfChildren: Int
     
-    var roomType: RoomType
+    var roomType: RoomType?
     var wifi: Bool
 }
 
@@ -38,6 +38,8 @@ struct RoomType: Equatable {
                 RoomType(id: 2, name: "Penthouse Suite", shortName:
                     "PHS", price: 309)]
     }
+    
+
 }
 
 // Equatable Protocol Implementation for RoomType
@@ -45,3 +47,4 @@ struct RoomType: Equatable {
 func ==(lhs: RoomType, rhs: RoomType) -> Bool {
     return lhs.id == rhs.id
 }
+

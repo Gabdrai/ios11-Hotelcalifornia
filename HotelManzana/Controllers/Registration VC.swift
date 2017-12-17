@@ -30,6 +30,7 @@ class RegistrationVC: UITableViewController {
     
     @IBOutlet weak var wifiSwitch: UISwitch!
     
+    @IBOutlet weak var roomTypeLabel: UILabel!
     
     let checkInDatePickerIndexPath = IndexPath(row: 1, section: 1)
     let checkOutDatePickerIndexPath = IndexPath(row: 3, section: 1)

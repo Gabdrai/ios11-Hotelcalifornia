@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UQ3-ga-nQ2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="t8I-wQ-BwG">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -340,6 +340,15 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OLe-5R-6Qn" id="VAd-Zs-dKF">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Room Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HX3-2d-tRg">
+                                                    <rect key="frame" x="16" y="11" width="87" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -369,6 +378,7 @@
                         <outlet property="numberOfAdultsStepper" destination="BZm-5B-wN8" id="BnO-hJ-ckS"/>
                         <outlet property="numberOfChildrenLabel" destination="dD1-FL-oun" id="hvZ-50-G3G"/>
                         <outlet property="numberOfChildrenStepper" destination="0VF-tE-WLp" id="gBz-8K-1pf"/>
+                        <outlet property="roomTypeLabel" destination="HX3-2d-tRg" id="Pmh-la-C6x"/>
                         <outlet property="wifiSwitch" destination="Ghj-6e-bTb" id="mWz-yz-uBV"/>
                         <segue destination="UQ3-ga-nQ2" kind="show" id="Qx3-1v-HV2"/>
                     </connections>
@@ -419,7 +429,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vik-KK-tcV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1486" y="149"/>
+            <point key="canvasLocation" x="1198" y="149"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TrL-pd-NfJ">
