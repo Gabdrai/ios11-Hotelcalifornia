@@ -229,5 +229,8 @@ class RegistrationVC: UITableViewController, SelectRoomTypeTableViewControllerDe
     
    
     
+    
+   
+    
 
 }

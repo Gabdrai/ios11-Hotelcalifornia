@@ -419,7 +419,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="KAW-Kp-dUA">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="7rA-E8-1WB"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="7rA-E8-1WB">
+                            <connections>
+                                <segue destination="t8I-wQ-BwG" kind="presentation" id="Dtt-88-xSm"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qiA-HD-KLz" userLabel="First Responder" sceneMemberID="firstResponder"/>
