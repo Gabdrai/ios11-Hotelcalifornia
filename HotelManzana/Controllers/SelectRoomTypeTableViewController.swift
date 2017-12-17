@@ -9,7 +9,7 @@
 import UIKit
 
 protocol SelectRoomTypeTableViewControllerDelegate {
-    self.delegate = self
+    
     func didSelect(roomType: RoomType)
 }
 
@@ -55,7 +55,6 @@ class SelectRoomTypeTableViewController: UITableViewController {
         roomType = RoomType.all[indexPath.row]
         
         delegate?.didSelect(roomType: roomType!)
-        
         
         tableView.reloadData()
         

@@ -121,6 +121,8 @@ class RegistrationVC: UITableViewController {
         let hasWifi = wifiSwitch.isOn
         
         
+        
+        
         print("First Name: \(firstName)")
         print("Last Name: \(lastName)")
         print("Email: \(email)")
@@ -139,6 +141,17 @@ class RegistrationVC: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var roomType : RoomType?
+        
+        func updateRoomType() {
+            if let roomType = roomType {
+                roomTypeLabel.text = roomType.name
+            } else {
+                roomTypeLabel.text = "Not Set"
+            }
+        }
+
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
