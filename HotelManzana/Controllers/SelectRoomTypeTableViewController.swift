@@ -11,13 +11,15 @@ import UIKit
 protocol SelectRoomTypeTableViewControllerDelegate {
     
     func didSelect(roomType: RoomType)
+    
 }
 
 
 class SelectRoomTypeTableViewController: UITableViewController {
-    
+    var delegate: SelectRoomTypeTableViewControllerDelegate?
     var roomType: RoomType?
     
+
     
     override func numberOfSections(in tableView: UITableView) -> Int
     {
@@ -63,4 +65,5 @@ class SelectRoomTypeTableViewController: UITableViewController {
     
     
     
-}
+
+
