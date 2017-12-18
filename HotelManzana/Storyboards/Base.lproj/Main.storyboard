@@ -369,9 +369,14 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="SJi-vg-FZy">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="r7k-6F-qIk">
+                            <connections>
+                                <action selector="cancelButtonTapped" destination="HNM-zn-2BD" id="W2Z-F1-9qb"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="ubV-di-xnh">
                             <connections>
-                                <action selector="doneBarButtonItem:" destination="HNM-zn-2BD" id="aWe-hM-3Qt"/>
+                                <segue destination="eqD-GR-yXZ" kind="unwind" unwindAction="unwindFromAddRegistrationWithUnwindSegueWithUnwindSegue:" id="MaZ-w3-ocR"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -392,8 +397,9 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qNe-9x-f9W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="eqD-GR-yXZ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="280.80000000000001" y="148.87556221889056"/>
+            <point key="canvasLocation" x="303" y="149"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="zd0-k8-cDA">
@@ -411,6 +417,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="t8I-wQ-BwG" kind="presentation" id="YGg-15-ypH"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -504,7 +513,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uPU-Pv-Rn5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-670" y="149"/>
+            <point key="canvasLocation" x="-577" y="149"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="YGg-15-ypH"/>
+    </inferredMetricsTieBreakers>
 </document>

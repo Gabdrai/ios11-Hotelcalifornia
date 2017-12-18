@@ -14,7 +14,15 @@ class RegistrationTableViewController: UITableViewController {
     var registrations: [Registration] = []
 
     
-    
+    @IBAction func unwindFromAddRegistrationWithUnwindSegue(unwindSegue: UIStoryboardSegue) {
+        
+        guard let addRegistrationTableViewController = unwindSegue.source as? RegistrationVC,
+            let registration = addRegistrationTableViewController.registration else
+        { return }
+        
+        registrations.append(registration)
+        tableView.reloadData()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

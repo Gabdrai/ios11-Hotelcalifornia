@@ -69,15 +69,7 @@ class SelectRoomTypeTableViewController: UITableViewController {
         
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender:
-        Any?) {
-        if segue.identifier == "SelectRoomType" {
-            let destinationViewController = segue.destination as?
-            SelectRoomTypeTableViewController
-            destinationViewController?.delegate = self as? SelectRoomTypeTableViewControllerDelegate
-            destinationViewController?.roomType = roomType
-        }
-    }
+   
    
                             
 

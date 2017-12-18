@@ -115,6 +115,15 @@ class RegistrationVC: UITableViewController, SelectRoomTypeTableViewControllerDe
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender:
+        Any?) {
+        if segue.identifier == "SelectRoomType" {
+            let destinationViewController = segue.destination as?
+            SelectRoomTypeTableViewController
+            destinationViewController?.delegate = self as? SelectRoomTypeTableViewControllerDelegate
+            destinationViewController?.roomType = roomType
+        }
+    }
     
     @IBAction func doneBarButtonItem(_ sender: UIBarButtonItem) {
         let firstName = firstNameTextField.text ?? ""
@@ -139,7 +148,7 @@ class RegistrationVC: UITableViewController, SelectRoomTypeTableViewControllerDe
         print("check out date: \(checkOutDate)")
         
         print("numberOfAdults: \(numberOfAdults)")
-        print("numberOfChildren: \(numberOfChildren)")
+        print("numberOfChildren: \(String(describing: numberOfChildren))")
         
         print("Wifi: \(hasWifi)")
         print("roomType: \(roomChoice)")
@@ -228,6 +237,10 @@ class RegistrationVC: UITableViewController, SelectRoomTypeTableViewControllerDe
     }
     
     
-   
-
+    @IBAction func cancelButtonTapped() {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
+    
 }
