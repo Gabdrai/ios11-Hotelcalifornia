@@ -32,12 +32,15 @@ class RegistrationVC: UITableViewController, SelectRoomTypeTableViewControllerDe
     func updateTotal()
     {
         let nights = daysBetweenDates(startDate: checkInDatePicker.date, endDate: checkOutDatePicker.date)
-         let roomChoicePrice = roomType?.price ?? 0
+        let roomChoicePrice = roomType?.price ?? 0
         let roomChoiceShort = roomType?.shortName ?? ""
+        
+        roomPrice.text = String(roomChoicePrice)
+        
         nbOfNight.text = String(nights)
         roomTypeName.text = roomChoiceShort
         
-        var totalWifi: Int = 0
+        var totalWifi: Int
         
         if wifiSwitch.isOn == true
         {
@@ -54,7 +57,7 @@ class RegistrationVC: UITableViewController, SelectRoomTypeTableViewControllerDe
         
         let total = ((nights*(roomChoicePrice)) + totalWifi)
         
-        priceTotal.text = String(total)
+        priceTotal.text = "$ \(total)"
         
 //        let nights: DateIntervalFormatter = DateIntervalFormatter()
 //
