@@ -24,6 +24,8 @@ class RegistrationTableViewController: UITableViewController {
         tableView.reloadData()
     }
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -72,6 +74,8 @@ class RegistrationTableViewController: UITableViewController {
         
         return cell
     }
+    
+    
     
     
   

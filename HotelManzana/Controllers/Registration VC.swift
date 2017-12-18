@@ -16,6 +16,65 @@ class RegistrationVC: UITableViewController, SelectRoomTypeTableViewControllerDe
     }
     
 
+    @IBOutlet weak var priceTotal: UILabel!
+    @IBOutlet weak var wifiPrice: UILabel!
+    @IBOutlet weak var isWifi: UILabel!
+    @IBOutlet weak var roomPrice: UILabel!
+    @IBOutlet weak var roomTypeName: UILabel!
+    @IBOutlet weak var nbOfNight: UILabel!
+    
+    func daysBetweenDates(startDate: Date, endDate: Date) -> Int {
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([Calendar.Component.day], from: startDate, to: endDate)
+        return components.day!
+    }
+    
+    func updateTotal()
+    {
+        let nights = daysBetweenDates(startDate: checkInDatePicker.date, endDate: checkOutDatePicker.date)
+         let roomChoicePrice = roomType?.price ?? 0
+        let roomChoiceShort = roomType?.shortName ?? ""
+        nbOfNight.text = String(nights)
+        roomTypeName.text = roomChoiceShort
+        
+        var totalWifi: Int = 0
+        
+        if wifiSwitch.isOn == true
+        {
+            isWifi.text = "Yes"
+            totalWifi = (10*nights)
+            wifiPrice.text = String(describing: totalWifi)
+
+            
+        } else {
+            wifiPrice.text = "0"
+            isWifi.text = "No"
+            totalWifi = 0
+        }
+        
+        let total = ((nights*(roomChoicePrice)) + totalWifi)
+        
+        priceTotal.text = String(total)
+        
+//        let nights: DateIntervalFormatter = DateIntervalFormatter()
+//
+//       nbOfNight.text = nights.string(from: checkInDatePicker.date, to: checkOutDatePicker.date)
+//
+//        var start: Date = checkInDatePicker.date
+//        var end: Date = checkOutDatePicker.date
+//        var timeDuration: TimeInterval
+//
+//        init(stat: Date, end: Date)
+//
+//
+//        timeDuration.hashValue
+        
+        
+        
+        
+    }
+    
+    
     @IBOutlet weak var firstNameTextField: UITextField!
 
     @IBOutlet weak var lastNameTextField: UITextField!
@@ -76,6 +135,8 @@ class RegistrationVC: UITableViewController, SelectRoomTypeTableViewControllerDe
             return 44.0
         }
     }
+    
+    
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
@@ -173,7 +234,7 @@ class RegistrationVC: UITableViewController, SelectRoomTypeTableViewControllerDe
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        updateTotal()
 
 
         // Uncomment the following line to preserve selection between presentations
@@ -224,6 +285,7 @@ class RegistrationVC: UITableViewController, SelectRoomTypeTableViewControllerDe
         
         checkOutDatePicker.minimumDate = checkInDatePicker.date.addingTimeInterval(86400)
         updateDateViews()
+        updateTotal()
     }
     
     @IBAction func stepperValueChanged(_ sender: Any) {
@@ -234,6 +296,7 @@ class RegistrationVC: UITableViewController, SelectRoomTypeTableViewControllerDe
     }
     
     @IBAction func wifiSwitchChanged(_ sender: Any) {
+        updateTotal()
     }
     
     
